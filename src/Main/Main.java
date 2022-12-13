@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -31,6 +32,28 @@ public class Main {
         System.out.println();
         int minValue = 200000;
         int maxValue = 0;
+        //TASK2
+        for (int j : arr) {
+            if (minValue > j) {
+                minValue = j;
+            }
+        }
+        for (int J : arr) {
+            if(maxValue < J){
+                maxValue = J;
+            }
+        }
+        System.out.println("The max payment per day is : " + maxValue + " in rubles");
+        System.out.println("The min payment per day is : " + minValue + " in rubles");
+    }
+    public static void task3(){
+        int[] arr = generateRandomArray();
+        double middleValueOfPayments;
+        System.out.println( );
+        System.out.println("TASK3");
+        System.out.println();
+        int minValue = 200000;
+        int maxValue = 0;
         int daysPerMonth = arr.length;
         //TASK2
         for (int j : arr) {
@@ -41,11 +64,11 @@ public class Main {
         for (int J : arr) {
             if(maxValue < J){
                 maxValue = J;
-        }
             }
-        maxValue = maxValue / daysPerMonth;
-        minValue = minValue / daysPerMonth;
-        System.out.println("The max payment per day is : " + maxValue + " in rubles");
-        System.out.println("The min payment per day is : " + minValue + " in rubles");
+        }
+        middleValueOfPayments = (double)(maxValue + minValue) / 2 * daysPerMonth;
+        System.out.println("The middle value of payments is: " + middleValueOfPayments + " in rubles" );
     }
+    //done
+
 }
