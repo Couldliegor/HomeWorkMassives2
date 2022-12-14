@@ -4,6 +4,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -69,6 +70,13 @@ public class Main {
         middleValueOfPayments = (double)(maxValue + minValue) / 2 * daysPerMonth;
         System.out.println("The middle value of payments is: " + middleValueOfPayments + " in rubles" );
     }
-    //done
 
+    //done
+    public static void task4() {
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'}; //3210 4 10 9 8765
+        System.out.println("\nTASK4\n");
+        for (int i = reverseFullName.length - 1; i >= 0 ; i--) {
+            System.out.print(reverseFullName[i]);
+        }
+    }
 }
